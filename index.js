@@ -132,7 +132,7 @@ app.get("/profile", withAuth, async (req, res) => {
   const userId = req.session.userId;
 
   // Try to retrieve the user's profile data from the Redis cache
-  redisClient.get(`user:${userId}:profile`, async (error, cachedData) => {
+  redisClient.get(`user:${userId}`, async (error, cachedData) => {
     if (error) {
       console.error(error);
     }
@@ -157,7 +157,7 @@ app.get("/profile", withAuth, async (req, res) => {
 
         // Save the profile data to the Redis cache with a TTL of 5 minutes
         redisClient.setex(
-          `user:${userId}:profile`,
+          `user:${userId}`,
           300,
           JSON.stringify(profileData)
         );
