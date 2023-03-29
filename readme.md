@@ -1,6 +1,6 @@
 run:
 
-> docker compose buil
+> docker compose build
 
 > docker compose up
 
@@ -20,9 +20,13 @@ run:
 
 
 
-#### Register
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y74fj45h36zu8uufks5r.png)
+
+#### sh in redis container
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/i1pcq820mpmu8ia5n0ld.png)
+
+
 
 
 
